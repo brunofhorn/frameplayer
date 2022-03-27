@@ -78,7 +78,7 @@ export default (props) => {
                         key={index} 
                         src={image} 
                         step={(index * (totalTime / frames.length) + frames.length)}
-                        style={{display: 'inline-block',height: 400, width: '100%',borderRadius: 12, backgroundImage: `url(${image})` }}
+                        style={{display: 'inline-block',height: 310, width: '100%',borderRadius: 12 }}
                     />
                 ))}
             </div>
@@ -86,7 +86,7 @@ export default (props) => {
                 <div style={{display: 'flex', flex: 1, cursor: 'pointer'}} onClick={()=> setPaused(!paused)}>
                     <img src={!paused ? images.pause : images.play} style={{width: 25, height: 25}} />
                 </div>
-                <div style={{display: 'flex', flex: 1, fontSize: 12, justifyContent: 'flex-start'}}>{formatMSS(atualTime)}</div>
+                <div style={{display: 'flex', flex: 1, fontSize: 12, justifyContent: 'flex-start', color: "#000"}}>{formatMSS(atualTime)}</div>
                 <div style={{display: 'flex', flex: 10}}>
                     <div style={{width: '100%', justifyContent: 'center', alignItems: 'center'}}>
                         <Slider
@@ -100,7 +100,7 @@ export default (props) => {
                         />
                     </div>
                 </div>
-                <div style={{display: 'flex', flex: 1, fontSize: 12, justifyContent: 'flex-end'}}>{formatMSS(totalTime)}</div>
+                <div style={{display: 'flex', flex: 1, fontSize: 12, justifyContent: 'flex-end', color: "#000"}}>{formatMSS(totalTime)}</div>
             </div>
         </div>
     )
